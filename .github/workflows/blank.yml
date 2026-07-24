@@ -4,5 +4,7 @@ jobs:
   build:
    runs-on: ubuntu-22.04
    steps:
-     - name: build
-       run: echo "buildng ${{ secrets.docker_password}}"
+     - name: checkout scm
+       uses: actions/checkout@v4
+     - name: print a file
+       run: cat index.html
