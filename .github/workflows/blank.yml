@@ -1,13 +1,8 @@
 name: test-work
-on: workflow_dispatch
+on: push
 jobs:
-  job1: 
+  build:
    runs-on: ubuntu-22.04
    steps:
-     - run: echo "step-1"
-     - run: date
-     - run: hostname
-     - run: free -m
-     - run: df -h
-       
-     
+     - name: build
+       run: echo "buildng ${{ vars.home}}"
